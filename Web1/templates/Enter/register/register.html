@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/register/" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Registration</legend>
+            <label for="nick">Nickname:</label>
+            <input id="nick" name="user_nickname" type="text" placeholder="Введите никнейм" maxlength="16">
+            <br><br>
+            
+            <label for="password">Password:</label>
+            <input id="password" name="user_password" type="password" placeholder="Введите пароль" maxlength="16">
+            <br><br>
+            <button type="submit">Send</button>
+        </fieldset>
+    </form>
+    <p>{{ text }}</p>
+    <p>{{ text_database }}</p>
+</body>
+</html>
